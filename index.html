@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration & ID Card</title>
+  <!-- Linking our CSS stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app-container">
+    <!-- Form Section -->
+    <section class="card form-card">
+      <h2>Student Registration</h2>
+      <form id="registrationForm">
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" placeholder="e.g. Jane Doe" required>
+        </div>
+
+        <div class="form-group">
+          <label for="admNo">Admission Number</label>
+          <input type="text" id="admNo" placeholder="e.g. S13/01234/2026" required>
+        </div>
+
+        <div class="form-group">
+          <label for="profilePic">Profile Photo</label>
+          <input type="file" id="profilePic" accept="image/*" required>
+        </div>
+
+        <button type="submit" id="submitBtn">Generate ID Card</button>
+      </form>
+    </section>
+
+    <!-- Generated ID Card Section -->
+    <section class="card id-card" id="idCard" style="display: none;">
+      <div class="id-header">
+        <h3>STUDENT IDENTIFICATION</h3>
+      </div>
+      <div class="id-body">
+        <div class="photo-frame">
+          <img id="displayPhoto" src="" alt="Profile Preview">
+        </div>
+        <div class="details">
+          <h4 id="displayName">Name Here</h4>
+          <p><strong>ADM NO:</strong> <span id="displayAdm">S13/00000/2026</span></p>
+          <p><strong>STATUS:</strong> Active Student</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Linking our JS logic -->
+  <script src="script.js"></script>
+</body>
+</html>
